@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @complex_building.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @complex_building.address %>
+</p>
+
+<p>
+  <strong>Units:</strong>
+  <%= @complex_building.units %>
+</p>
+
+<p>
+  <strong>Sqmt:</strong>
+  <%= @complex_building.sqmt %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @complex_building.price %>
+</p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@complex_building.image_attachment_path, :size => '250x250') %>
+</p>
+
+<%= link_to 'Edit', edit_complex_building_path(@complex_building) %> |
+<%= link_to 'Back', complex_buildings_path %>

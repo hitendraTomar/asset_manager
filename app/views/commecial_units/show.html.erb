@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @commecial_unit.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @commecial_unit.address %>
+</p>
+
+<p>
+  <strong>Shops:</strong>
+  <%= @commecial_unit.shops %>
+</p>
+
+<p>
+  <strong>Sqmt:</strong>
+  <%= @commecial_unit.sqmt %>
+</p>
+
+<p>
+  <strong>Parking:</strong>
+  <%= @commecial_unit.parking %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @commecial_unit.price %>
+</p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@commecial_unit.image_attachment_path, :size => '250x250') %>
+</p>
+
+<%= link_to 'Edit', edit_commecial_unit_path(@commecial_unit) %> |
+<%= link_to 'Back', commecial_units_path %>

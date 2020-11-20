@@ -1,0 +1,46 @@
+<%= form_with(model: commecial_unit, local: true) do |form| %>
+  <% if commecial_unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(commecial_unit.errors.count, "error") %> prohibited this commecial_unit from being saved:</h2>
+
+      <ul>
+      <% commecial_unit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shops %>
+    <%= form.text_field :shops %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sqmt %>
+    <%= form.text_field :sqmt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parking %>
+    <%= form.text_field :parking %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field 'image' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
